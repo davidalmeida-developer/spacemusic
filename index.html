@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="shortcut icon" href="./icone2.ico" type="image/x-icon">
+        <title>Space Music</title>
+        <link rel="stylesheet" href="style.css">
+
+    </head>
+    <body>
+        <header>
+            
+            <nav>
+                <!-- <span class="logo" id="" style="color: black; text-shadow: none; font-size: 25px; ">Space Music</span> -->
+                <a href="#">Home</a>
+                <a href="#">Playlists</a>
+                <a href="#">Curiosidades</a>
+                <a href="#">Clipes</a>
+                <a href="#">Letras</a>
+            </nav>
+        </header>
+        <img class="logo-image" src="./Logo-Oficial - Copia.png" alt="logo">
+        <aside>
+            <div id='player' draggable="true">
+                <h2 class="logo" style="color: black; text-shadow: none; font-size: 25px; margin-left: 15px;">Space Player</h2>
+                <div >
+                    <ol id="playlist">
+                        
+                    </ol>
+                </div id= "controls">
+                <input type="button" value="⏮️" onclick="last()" id="last"><input id="play" type="button" value="▶️" onclick="playl()"> <input id="pause" type="button" value="⏸️" onclick="pause()"><input id="next" type="button" value="⏭️" onclick="next()"><input type="range" name="volume" min="0" value="0.5" max="1" step="0.1" onchange="volume()" id="volume">
+            </div>
+
+        </aside>
+        <main>
+        
+            <section class="top">
+                <h1 class="top-title">Top-10 Músicas Brasileiras</h1>
+                <div class="lista">
+                    <ol >
+                        <li >Chega e Senta - John Amplificado <input type="button" value="+" onclick="adbr1()"></li>
+                        <li >Quer Voar - Matuê <input type="button" value="+" onclick="adbr2()"></li>
+                        <li>Meu Pedaço de Pecado - João Gomes <input type="button" value="+" onclick="adbr3()"></li>
+                        <li>Arranhão - Henrique e Juliano <input type="button" value="+" onclick="adbr4()"></li>
+                        <li>Rolê - Tarcísio do Acordeon, Marcynho Sensação <input type="button" value="+" onclick="adbr5()"></li>
+                        <li>Você Beberia ou Não Beberia? - Zé Neto & Cristiano <input type="button" value="+" onclick="adbr6()"></li>
+                        <li>Bala Love - Mc Anjim, Dj Lv Mdp, Dj PH da Serra <input type="button" value="+" onclick="adbr7()"></li>
+                        <li>Morena - Luan Santana <input type="button" value="+" onclick="adbr8()"></li>
+                        <li >Ela e Ela - Zé Neto & Cristiano <input type="button" value="+" onclick="adbr9()"></li>
+                        <li>Ficha Limpa - Gusttavo Lima <input type="button" value="+" onclick="adbr10()"></li>
+                        
+                    </ol>
+                </div>
+                <div class="top-imagens">
+                    <img class="top-imagens-img1" src="./imagens/henrique-e-juliano.jpg" alt="Henrique e Juliano">
+                    <img class="top-imagens-img2" src="./imagens/ludmilla.jpg" alt="Ludmilla">
+                    <img class="top-imagens-img3" src="./imagens/mc-anjim.jpg" alt="Mc Anjim">
+                    <img class="top-imagens-img4" src="./imagens/luan-santana.jpg" alt="Luan Santana">
+                    <img class="top-imagens-img5" src="./imagens/matue.jpg" alt="Matuê">
+                    <img class="top-imagens-img6" src="./imagens/john.jpg" alt="John Amplificado">
+                </div>
+                
+            </section>
+            
+            <section class="top">
+                <h1 class="top-title">Top-10 Sertanejo</h1>
+                <div class="lista">
+                    <ol >
+                        <li>Arranhão - Henrique e Juliano</li>
+                        <li>Você Beberia ou Não Beberia? - Zé Neto & Cristiano</li>
+                        <li>Morena - Luan Santana</li>
+                        <li>Ela e Ela - Zé Neto & Cristiano</li>
+                        <li>Ficha Limpa - Gusttavo Lima</li>
+                        <li>Cê Tá Preparada - Marília Mendonça</li>
+                        <li>Desbloqueado - Diego & Victor Hugo</li>
+                        <li>Expectativa x Realidade - Matheus e Kauan</li>
+                        <li>Zero Saudade - Os Barões da Pisadinha</li>
+                        <li>Faz Amor Comigo Só Hoje - Israel & Rodolffo, Wesley Safadão</li>
+                        
+                    </ol>
+                </div>
+                <div class="top-imagens">
+                    <img class="top-imagens-img1" src="./imagens/ze-neto.jpg" alt="Zé Neto & Cristiano">
+                    <img class="top-imagens-img2" src="./imagens/marilia.jpg" alt="Marília Mendonça">
+                    <img class="top-imagens-img3" src="./imagens/gustavo-lima.jpg" alt="Gusttavo Lima">
+                    <img class="top-imagens-img4" src="./imagens/maiara-e-maraisa.jpg" alt="Maiara e Maraísa">
+                    <img class="top-imagens-img5" src="./imagens/matheus-kauan.jpg" alt="Matheus & Kauan">
+                    <img class="top-imagens-img6" src="./imagens/baroes.jpg" alt="Barões da Pisadinha">
+                </div>
+                
+            </section>
+            
+            <section class="top">
+                <h1 class="top-title">Top-10 Pagode</h1>
+                <div class="lista">
+                    <ol >
+                        <li>Juramento do Dedinho - Bom Gosto, Mano Walter</li>
+                        <li>Vai Errar de Novo - Pixote</li>
+                        <li>Sobrenome - Vitinho, Péricles</li>
+                        <li>Já Tentei - Vou pro Sereno, Ludmilla</li>
+                        <li>Golaço - Turma do Pagode, Vou pro Sereno</li>
+                        <li>Adorei - Grupo Menos é Mais</li>
+                        <li>Reprise - Sorriso Maroto</li>
+                        <li>Pesou o Rolê - Di Propósito, Harmonia do Samba, Jojo Marontinni</li>
+                        <li>Eu Não Sou de Entregar - Ferrugem</li>
+                        <li>Apaixonei de Vez - Guga Nandes</li>
+                        
+                    </ol>
+                </div>
+                
+                <div class="top-imagens">
+                    <img class="top-imagens-img1" src="./imagens/henrique-e-juliano.jpg" alt="Henrique e Juliano">
+                    <img class="top-imagens-img2" src="./imagens/ludmilla.jpg" alt="Ludmilla">
+                    <img class="top-imagens-img3" src="./imagens/mc-anjim.jpg" alt="Mc Anjim">
+                    <img class="top-imagens-img4" src="./imagens/luan-santana.jpg" alt="Luan Santana">
+                    <img class="top-imagens-img5" src="./imagens/matue.jpg" alt="Matuê">
+                    <img class="top-imagens-img6" src="./imagens/john.jpg" alt="John Amplificado">
+                </div>
+            </section>
+            
+            <section class="top">
+                <h1 class="top-title">Top-10 Funk</h1>
+                <div class="lista">
+                    <ol >
+                        <li>Bala Love - Mc Anjim, Dj Lv Mdp, Dj PH da Serra</li>
+                        <li>Não Quer Chifre - Mc Frog, Dj Lucas Beat</li>
+                        <li>Não Nasceu pra Namorar - Mc Zaquin, Mc Rick</li>
+                        <li>Ela é Espetacular - Mc Livinho</li>
+                        <li>Menina Se Prepara - Mc Pepeu, Dj Swat</li>
+                        <li>Baile do Cinga do 12 - Mc Gontijo, Dj Sati Marconex</li>
+                        <li>Balança a Glock - Dj LG, Mc Jajau</li>
+                        <li>Chamo Teu Vulgo Malvadão - Mc Jhenny, Dj kosta 22, Mc Gw</li>
+                        <li>Ei Tudo Bem - Mc Zaquin, Dj Wesley Gonzaga</li>
+                        <li class="dez">Passarinho Que Som É Esse - Dj Topo, Mc Cyclope, Mc PR</li>
+                        
+                    </ol>
+                </div>
+                
+                <div class="top-imagens">
+                    <img class="top-imagens-img1" src="./imagens/henrique-e-juliano.jpg" alt="Henrique e Juliano">
+                    <img class="top-imagens-img2" src="./imagens/ludmilla.jpg" alt="Ludmilla">
+                    <img class="top-imagens-img3" src="./imagens/mc-anjim.jpg" alt="Mc Anjim">
+                    <img class="top-imagens-img4" src="./imagens/luan-santana.jpg" alt="Luan Santana">
+                    <img class="top-imagens-img5" src="./imagens/matue.jpg" alt="Matuê">
+                    <img class="top-imagens-img6" src="./imagens/john.jpg" alt="John Amplificado">
+                </div>
+                
+            </section>
+            
+            <section class="top">
+                <h1 class="top-title">Top-10 Rap</h1>
+                <div class="lista">
+                    <ol >
+                        <li>Quer Voar - Matuê</li>
+                        <li> Parabellum - Dalsin, Alaska, Gioprod</li>
+                        <li>Se essa Bunda - Costa Gold, Kawe, André Nine</li>
+                        <li>Apê 1001 - Bin, Ludmilla, MainStreet, Dallass</li>
+                        <li>Poesia Acústica 11: Nada Mudou - PineApple StormTv</li>
+                        <li>Eu Precisava Voltar com a Folhinha - PineApple StormTv</li>
+                        <li>Corte Americano - Filipe Ret, L7nnon, Chris Beats Zn</li>
+                        <li>Vida Louca - Mc Poze do Rodo, Neo Beats, MainStreet</li>
+                        <li>Nada é Pra Sempre - L7nnon</li>
+                        <li>Easy Money - Djonga, Coyote Beatz</li>
+                        
+                    </ol>
+                </div>
+                
+                <div class="top-imagens">
+                    <img class="top-imagens-img1" src="./imagens/henrique-e-juliano.jpg" alt="Henrique e Juliano">
+                    <img class="top-imagens-img2" src="./imagens/ludmilla.jpg" alt="Ludmilla">
+                    <img class="top-imagens-img3" src="./imagens/mc-anjim.jpg" alt="Mc Anjim">
+                    <img class="top-imagens-img4" src="./imagens/luan-santana.jpg" alt="Luan Santana">
+                    <img class="top-imagens-img5" src="./imagens/matue.jpg" alt="Matuê">
+                    <img class="top-imagens-img6" src="./imagens/john.jpg" alt="John Amplificado">
+                </div>
+                
+            </section>
+            
+            <section class="top">
+                <h1 class="top-title">Top-10 Músicas Internacionais</h1>
+                <div class="lista">
+                    <ol >
+                        <li>Stay - The Kid Laroy, Justin Bieber</li>
+                        <li>Girls Want Girls - Drake, Lil Baby</li>
+                        <li>Fair Trade - Drake, Travis Scott</li>
+                        <li>Industry Baby - Lil Nas X, Jack Harlow</li>
+                        <li>Way 2 Sexy - Drake, Future, Young Thug</li>
+                        <li>Champagne Poetry - Drake</li>
+                        <li>Bad Habits - Sheran</li>
+                        <li>Beggin' - Maneskin</li>
+                        <li>Pepas - Farruko</li>
+                        <li>Knife Talk - Drake, 21 Savage, Project Pat</li>
+                        
+                    </ol>
+                </div>
+                <div class="top-imagens">
+                    <img class="top-imagens-img1" src="./imagens/henrique-e-juliano.jpg" alt="Henrique e Juliano">
+                    <img class="top-imagens-img2" src="./imagens/ludmilla.jpg" alt="Ludmilla">
+                    <img class="top-imagens-img3" src="./imagens/mc-anjim.jpg" alt="Mc Anjim">
+                    <img class="top-imagens-img4" src="./imagens/luan-santana.jpg" alt="Luan Santana">
+                    <img class="top-imagens-img5" src="./imagens/matue.jpg" alt="Matuê">
+                    <img class="top-imagens-img6" src="./imagens/john.jpg" alt="John Amplificado">
+                </div>
+                
+                
+            </section>
+            <section class="top">
+                <h1 class="top-title">Top-10 Músicas Hip-Hop</h1>
+                <div class="lista">
+                    <ol >
+                        <li>Family Ties - baby Keem, Kendrik Lamar</li>
+                        <li>Fair Trade - Drake, Travis Scott</li>
+                        <li>Moon - Kanye West</li>
+                        <li>Lonely - DaBaby, Lil Wayne</li>
+                        <li>Knife Talk - Drake, 21 Savage, Project Pat</li>
+                        <li>Sharing Locations - Meek Mill, Lil Durk, Lil Baby</li>
+                        <li>Repeat It - Lil Tecca, Gunna</li>
+                        <li>Range Brothers - Baby Keem, Kendrik Lamar</li>
+                        <li>Way 2 Sexy - Drake, Future, Young Thug</li>
+                        <li>Blue Notes 2 - Meek Mill, Lil Uzi Vert</li>
+                        
+                    </ol>
+                </div>
+                <div class="top-imagens">
+                    <img class="top-imagens-img1" src="./imagens/henrique-e-juliano.jpg" alt="Henrique e Juliano">
+                    <img class="top-imagens-img2" src="./imagens/ludmilla.jpg" alt="Ludmilla">
+                    <img class="top-imagens-img3" src="./imagens/mc-anjim.jpg" alt="Mc Anjim">
+                    <img class="top-imagens-img4" src="./imagens/luan-santana.jpg" alt="Luan Santana">
+                    <img class="top-imagens-img5" src="./imagens/matue.jpg" alt="Matuê">
+                    <img class="top-imagens-img6" src="./imagens/john.jpg" alt="John Amplificado">
+                </div>
+                
+                
+            </section>
+            <section class="top">
+                <h1 class="top-title">Top-10 Pop</h1>
+                <div class="lista">
+                    <ol >
+                        <li>Shivers - Ed Sheeran</li>
+                        <li> Save Your Tears - The Weeknd, Ariana Grande</li>
+                        <li>Stay - The Kid Laroy, Justin Bieber</li>
+                        <li>Kesi - Camilo, Shawn Mendes</li>
+                        <li>Life Goes On - Oliver Tree</li>
+                        <li>Woman - Doja Cat</li>
+                        <li>Bad Habits - Ed Sheeran</li>
+                        <li>Cold Heart - Elton John, Dua Lipa, Pnau</li>
+                        <li>Girl Like Me - Black Eyed Peas, Shakira</li>
+                        <li class="dez">Watermelon Sugar - Harry Styles</li>
+                        
+                    </ol>
+                </div>
+                <div class="top-imagens">
+                    <img class="top-imagens-img1" src="./imagens/henrique-e-juliano.jpg" alt="Henrique e Juliano">
+                    <img class="top-imagens-img2" src="./imagens/ludmilla.jpg" alt="Ludmilla">
+                    <img class="top-imagens-img3" src="./imagens/mc-anjim.jpg" alt="Mc Anjim">
+                    <img class="top-imagens-img4" src="./imagens/luan-santana.jpg" alt="Luan Santana">
+                    <img class="top-imagens-img5" src="./imagens/matue.jpg" alt="Matuê">
+                    <img class="top-imagens-img6" src="./imagens/john.jpg" alt="John Amplificado">
+                </div>
+                
+                
+            </section>
+            
+            <section class="top">
+                <h1 class="top-title">Top-10 Eletrônica</h1>
+                <div class="lista">
+                    <ol >
+                        <li>Hear Me Now - Alok, Bruno Martini, Marcos Zeeba</li>
+                        <li>Slow Down - Maverick Sabre, Jorja Smith, V. Culture, Slow Motion</li>
+                        <li>Piece Of Your Heart - Meduza, Alok, Goodboys</li>
+                        <li>Never Let Me Go - Alok</li>
+                        <li>Infinity - Dubdogz, Bhaskar</li>
+                        <li>Fuego - Alok</li>
+                        <li>Tokyo Drift - KVSH</li>
+                        <li>Sunshine - Cat Dealears, LOthief, Santti</li>
+                        <li>Drinkee - Sofi Tukker, Vintage Culture, Slow Motion</li>
+                        <li>Nave Espacial - Liu, Samantha Machado</li>
+                        
+                    </ol>
+                </div>
+                
+                <div class="top-imagens">
+                    <img class="top-imagens-img1" src="./imagens/henrique-e-juliano.jpg" alt="Henrique e Juliano">
+                    <img class="top-imagens-img2" src="./imagens/ludmilla.jpg" alt="Ludmilla">
+                    <img class="top-imagens-img3" src="./imagens/mc-anjim.jpg" alt="Mc Anjim">
+                    <img class="top-imagens-img4" src="./imagens/luan-santana.jpg" alt="Luan Santana">
+                    <img class="top-imagens-img5" src="./imagens/matue.jpg" alt="Matuê">
+                    <img class="top-imagens-img6" src="./imagens/john.jpg" alt="John Amplificado">
+                </div>
+                
+            </section>
+
+            <section class="top">
+                <h1 class="top-title">Top-10 Rock 00s</h1>
+                <div class="lista">
+                    <ol >
+                        <li>In The End - Linkin Park</li>
+                        <li>Mr. Brightside - The Killers</li>
+                        <li>Welcome to the black Parade - My Chemical Romance</li>
+                        <li>You Know You're Right - Nirvana</li>
+                        <li>Seven Nation Army - The White Stripes</li>
+                        <li>The Middle - Jimmy Eat World</li>
+                        <li>American Idiot - Green Day</li>
+                        <li>Woman - Wolfmother</li>
+                        <li>Like a Stone - Audioslave</li>
+                        <li>Dance Dance - Fall out Boy</li>
+                        
+                    </ol>
+                </div>
+                
+                <div class="top-imagens">
+                    <img class="top-imagens-img1" src="./imagens/henrique-e-juliano.jpg" alt="Henrique e Juliano">
+                    <img class="top-imagens-img2" src="./imagens/ludmilla.jpg" alt="Ludmilla">
+                    <img class="top-imagens-img3" src="./imagens/mc-anjim.jpg" alt="Mc Anjim">
+                    <img class="top-imagens-img4" src="./imagens/luan-santana.jpg" alt="Luan Santana">
+                    <img class="top-imagens-img5" src="./imagens/matue.jpg" alt="Matuê">
+                    <img class="top-imagens-img6" src="./imagens/john.jpg" alt="John Amplificado">
+                </div>
+                
+                <audio id="audio" src="" ></audio>
+            </section>
+
+
+        
+        </main>
+        <footer>
+            <p>&copy; David Almeida - Todos os direitos reservados</p>
+        </footer>
+        <script src="./script.js"></script>
+    </body>
+</html>

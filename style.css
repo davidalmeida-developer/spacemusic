@@ -1,0 +1,355 @@
+@charset "UTF-8";
+
+@font-face {
+    font-family: 'shockwave';
+    src: url(./shockwave.ttf) format('truetype') ;
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'street';
+    src: url(./street.ttf) format('truetype') ;
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'music';
+    src: url(./music.ttf) format('truetype') ;
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'absolute';
+    src: url(./Absolute.ttf) format('truetype') ;
+    font-weight: normal;
+    font-style: normal;
+}
+
+:root{
+    --cor1: #E422AD;
+    --cor2: #8D0C94;
+    --cor3: #A6FF96;
+    --cor4: #6EE05B;
+    --cor5: #39832c;
+}
+
+
+
+body{
+    display: grid;
+    grid-template-columns: (7,1fr);
+    grid-template-rows: auto;
+    grid-template-areas: 
+    "header header header header header header header"
+    "logo logo logo logo logo logo logo"
+    "player main main main main main main"
+    "footer footer footer footer footer footer footer";
+    background-image: linear-gradient(to right, #39832c, #A6ff96, #39832c);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0px;
+    padding: 0px;
+    gap: 15px 15px;
+}
+
+header{
+grid-area: header;
+position: sticky;
+    top: 0;
+}
+
+nav{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: #E422AD;
+    color: black;
+    width: 100%;
+    height: auto;
+}
+
+nav > a{
+    display: flex;
+    margin: auto 5px 10px 20px;
+    color: black;
+    font-weight: bolder;
+    text-decoration: unset; 
+}
+
+nav > a:hover{
+    color: var(--cor3);
+    border-radius: 5px;
+}
+
+.morty{
+    display: inline-block;
+    margin: 5px 0px 0px 5px;
+    padding: 0px;
+    height: 30px;
+    width: auto;
+}
+
+.logo-image{
+    grid-area: logo;
+    display: block;
+    margin: 20px auto 0px auto;
+    width: auto;
+    height: 150px;
+    
+}
+
+
+aside{
+    grid-area: player;
+}
+
+#player{
+    color: black;
+    border: solid black 0.5px;
+    background-color: gray;
+    max-width: 180px;
+    height: 220px;
+    margin: 5px 0px 0px 30px;
+    text-align: center;
+    border-radius: 10px;
+    padding: 0px 5px 7px;
+    padding-top: 0px;
+    position: fixed;
+    box-shadow: 2px 2px 2px 2px black;
+}
+
+#playlist{
+    background-color: white;
+    font-size: small;
+    margin: 0px;
+    height: 100px;
+    max-height: 120px;
+    overflow-y: scroll;
+    text-align: left;
+    padding: 5px;
+    border-radius: 3px;
+}
+
+#controls{
+    display: inline-block;
+    color: rgb(64, 221, 241);
+}
+
+#play{
+    display: inline;
+    
+}
+#pause{
+    display: inline;
+    
+}
+#last{
+    display: inline;
+}
+#next{
+    display: inline;
+}
+
+#volume{
+    display: inline;
+    
+    
+}
+
+main{
+    grid-area: main;
+    overflow: scroll;
+    scroll-behavior: smooth;
+    margin: auto;
+    height: 343px;
+    width: auto;
+    background-color: #A6FF96;
+    border-radius: 10px;
+    padding: 10px;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+    padding: 30px;
+    box-shadow: 2px 2px 2px 2px black;
+    
+    
+}
+main::-webkit-scrollbar{
+    display: none;
+    scroll-behavior: smooth;
+}
+
+.top{
+    background-color: white;
+    display: grid;
+    grid-template-columns: (2,1fr);
+    grid-template-rows: auto;
+    grid-template-areas: "title title" "lista img";
+    max-width: auto;
+    margin: auto ;
+    margin-bottom: 10px;
+    border-radius: 10px;
+    padding-left: 0px;
+}
+
+.top-title{
+    grid-area: title ;
+    background-color: #8D0C94 ;
+    color: white;
+    margin: 0px;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    padding: 2px;
+    text-align: center;
+    
+}
+
+.lista{
+    grid-area: lista;
+    background-color: white;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    
+}
+
+.top-imagens{
+    grid-area: img;
+    display: grid;
+    width: auto;
+    grid-template-columns: (2,1fr);
+    grid-template-rows: auto;
+    text-align: center;
+    grid-template-areas: 
+    "  img1  img2 "
+    "  img3  img4"
+    " img5 img6";
+    padding: 10px;
+    gap: 5px 5px;
+    
+}
+
+
+.top-imagens-img1{
+    grid-area: img1 ;
+    max-height: 80px;
+    height: auto;
+    border-radius: 5px;
+}
+.top-imagens-img2{
+    grid-area: img2 ;
+    max-height: 80px;
+    width: auto;
+    border-radius: 5px;
+    
+}
+.top-imagens-img3{
+    grid-area: img3 ;
+    max-height: 80px;
+    height: auto;
+    border-radius: 5px;
+    
+}
+.top-imagens-img4{
+    grid-area: img4 ;
+    max-height: 80px;
+    height: auto;
+    border-radius: 5px;
+    
+}
+.top-imagens-img5{
+    grid-area: img5 ;
+    max-height: 80px;
+    height: auto;
+    border-radius: 5px;
+    
+}
+.top-imagens-img6{
+    grid-area: img6 ;
+    max-height: 80px;
+    height: auto;
+    border-radius: 5px;    
+}
+
+
+
+.logo{
+    font-family: shockwave;
+    font-style: normal;
+    font-weight: bolder;
+    font-size: 800px;
+    color: #E422AD;
+   text-shadow: 3px 3px  black;
+   
+}
+
+
+ol{
+  list-style-position: inside;
+  font-weight: normal;
+  padding-right: 0px ;
+  margin-left: -30px;  
+
+}
+
+li{
+    
+    padding-right: 0px;
+}
+
+.lista li:hover{
+    background-color: var(--cor5);
+    color: white;
+    
+    padding-right: 0px;
+    border-radius: 5px;
+    
+}
+
+footer{
+    grid-area: footer;
+    background-image: linear-gradient(to right,black, transparent);
+    color: white;
+    bottom: 0px;
+
+}
+footer > p{
+    margin: 10px;
+    text-shadow: 1px 1px 1px black;
+}
+
+
+@media (max-width: 480px) {
+
+body{
+    grid-template-columns: (1,1fr);
+    grid-template-areas: "header" "logo" "player" "main" "footer";
+}
+
+nav{
+    
+    width: 100%;
+}
+nav > a{
+    margin: 0px;
+}
+.top{
+    grid-template-areas: "title" "lista" "img";
+    font-size: smaller;
+}
+
+#player{
+    position: static;
+    margin: auto;
+    max-width: 50%;
+}
+main{
+    margin: auto;
+    max-width: 80%;
+}
+footer{
+    margin: auto;
+    width: 100%;
+
+}
+}
