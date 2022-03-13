@@ -8,6 +8,16 @@ var br7= 'https://archive.org/download/mc-anjim-bala-love-letra-oh-a-cara-de-tra
 var br8= 'https://archive.org/download/mc-anjim-bala-love-letra-oh-a-cara-de-tralha-que-ela-gosta-50k/Luan%20Santana%20-%20MORENA%20%28Clipe%20Oficial%29_50k.mp3'
 var br9= 'https://ia601502.us.archive.org/33/items/ze-neto-e-cristiano-ela-e-ela-dvd-chaaama-50k/Z%C3%A9%20Neto%20e%20Cristiano%20-%20ELA%20E%20ELA%20-%20DVD%20Chaaama_50k.mp3'
 var br10='https://ia601508.us.archive.org/2/items/mc-anjim-bala-love-letra-oh-a-cara-de-tralha-que-ela-gosta-50k/Gusttavo%20Lima%20-%20Ficha%20Limpa%20-%20Falando%20de%20Amor_50k.mp3'
+
+var rap2='https://archive.org/download/spacemusic_202110/Dalsin%20-%20Parabellum%20%28GioProd%29%20VideoClipe%20Oficial%20_50k.mp3'
+var rap3='https://archive.org/download/spacemusic_202110/Costa%20Gold%20-%20Se%20Essa%20B_nda%20%28Letra%29%20ft.%20Kawe%20%28se%20essa%20bunda%20fosse%20minha%29_50k.mp3'
+var rap4='https://archive.org/download/spacemusic_202110/BIN%20-%20Ap%C3%AA%201001%20FT.%20Ludmilla%20%28Clipe%20Oficial%29_50k.mp3'
+var rap5='https://archive.org/download/spacemusic_202110/Poesia%20Ac%C3%BAstica%2011%20-%20Nada%20Mudou%20-%20L7NNON%2C%20CHRIS%2C%20Ryan%20SP%2C%20Lourena%2C%20Xam%C3%A3%2C%20Azzy%2C%20Mc%20Poze%2C%20Cynthia%20Luz_50k.mp3'
+var rap6='https://archive.org/download/spacemusic_202110/Cesar%20Mc%20-%20Eu%20precisava%20voltar%20com%20a%20Folhinha%20%28Videoclipe%20Oficial%29_50k.mp3'
+var rap7='https://archive.org/download/spacemusic_202110/Filipe%20Ret%20-%20Corte%20Americano%20part.%20L7NNON_50k.mp3'
+var rap8='https://archive.org/download/spacemusic_202110/MC%20Poze%20do%20Rodo%20-%20Vida%20Louca%20%28prod.%20Neobeats%29_50k.mp3'
+var rap9='https://archive.org/download/spacemusic_202110/L7NNON%20-%20Nada%20E%CC%81%20Pra%20Sempre%20Letra%20_50k.mp3'
+var rap10='https://archive.org/download/spacemusic_202110/Djonga%20-%20Ea%24y%20Money%20%28Clipe%20Oficial%29_50k.mp3'
 var audio= document.getElementById('audio')
 var posicao= document.getElementById('playlist')
 var teste2= []
@@ -25,7 +35,7 @@ function volume() {
 }
 
 function mudaCor() {
-    cor.style= "background-color: white; color: black; font-weight: small;"
+    cor.style= 'background-color: white; color: black; font-weight: small;'
     
 }
 
@@ -98,10 +108,36 @@ function fcor(){
         cor.style= "background-color: blue; color: white; font-weight: normal;"}     
     else if(audio.src == br10){
         cor= document.getElementById('br10')
-        cor.style= "background-color: blue; color: white; font-weight: normal;"} 
+        cor.style= "background-color: blue; color: white; font-weight: normal;"}
+    else if(audio.src == rap2){
+        cor= document.getElementById('rap2')
+        cor.style= "background-color: blue; color: white; font-weight: normal;"}     
+    else if(audio.src == rap3){
+        cor= document.getElementById('rap3')
+        cor.style= "background-color: blue; color: white; font-weight: normal;"}     
+    else if(audio.src == rap4){
+        cor= document.getElementById('rap4')
+        cor.style= "background-color: blue; color: white; font-weight: normal;"}     
+    else if(audio.src == rap5){
+        cor= document.getElementById('rap5')
+        cor.style= "background-color: blue; color: white; font-weight: normal;"}     
+    else if(audio.src == rap6){
+        cor= document.getElementById('rap6')
+        cor.style= "background-color: blue; color: white; font-weight: normal;"}     
+    else if(audio.src == rap7){
+        cor= document.getElementById('rap7')
+        cor.style= "background-color: blue; color: white; font-weight: normal;"}     
+    else if(audio.src == rap8){
+        cor= document.getElementById('rap8')
+        cor.style= "background-color: blue; color: white; font-weight: normal;"}     
+    else if(audio.src == rap9){
+        cor= document.getElementById('rap9')
+        cor.style= "background-color: blue; color: white; font-weight: normal;"}     
+    else if(audio.src == rap10){
+        cor= document.getElementById('rap10')
+        cor.style= "background-color: blue; color: white; font-weight: normal;"}  
          
 }
-                
 
 function adbr1() {
     if(teste2.indexOf(br1) == -1){
@@ -113,8 +149,8 @@ function adbr1() {
 function adbr2() {
     if(teste2.indexOf(br2) == -1){
     var musicname= 'Quer Voar'
-    teste2.push(br2)
     posicao.innerHTML+= `<li id="br2">${musicname}</li>`
+    teste2.push(br2)
     } 
      
 }
@@ -161,7 +197,7 @@ function adbr5() {
             var musicname= 'Morena'
             posicao.innerHTML+= `<li id="br8">${musicname}</li>`
             teste2.push(br8)}
-        }
+    }
     function adbr9() {
         if(teste2.indexOf(br9) == -1){
             var musicname= 'Ela e Ela'
@@ -178,6 +214,74 @@ function adbr5() {
     }
 
 
+
+function adrap2() {
+    if(teste2.indexOf(rap2) == -1){
+    var musicname= 'Parabellum'
+    posicao.innerHTML+= `<li id="rap2">${musicname}</li>`
+    teste2.push(rap2)
+    } 
+     
+}
+
+
+function adrap3() {
+    if(teste2.indexOf(rap3) == -1){
+        var musicname= 'Se essa Bunda'
+        posicao.innerHTML+= `<li id="rap3">${musicname}</li>`
+        teste2.push(rap3)
+    }
+}
+
+function adrap4() {
+    if(teste2.indexOf(rap4) == -1){
+        var musicname= 'Apê 1001'
+        posicao.innerHTML+= `<li id="rap4">${musicname}</li>`
+        teste2.push(rap4)
+    }
+}
+
+
+function adrap5() {
+    if(teste2.indexOf(rap5) == -1){
+        var musicname= 'Nada Mudou'
+        posicao.innerHTML+= `<li id="rap5">${musicname}</li>`
+        teste2.push(rap5)
+        }
+    }
+    function adrap6() {
+    if(teste2.indexOf(rap6) == -1){
+        var musicname= 'Eu Precisava voltar com a Folhinha'
+        posicao.innerHTML+= `<li id="rap6">${musicname}</li>`
+        teste2.push(rap6)}
+    }
+    function adrap7() {
+        if(teste2.indexOf(rap7) == -1){
+            var musicname= 'Corte Americano'
+            posicao.innerHTML+= `<li id="rap7">${musicname}</li>`
+        teste2.push(rap7)}
+    }
+    function adrap8() {
+        if(teste2.indexOf(rap8) == -1){
+            var musicname= 'Vida Louca'
+            posicao.innerHTML+= `<li id="rap8">${musicname}</li>`
+            teste2.push(rap8)}
+    }
+    function adrap9() {
+        if(teste2.indexOf(rap9) == -1){
+            var musicname= 'Nada é pra Sempre'
+            posicao.innerHTML+= `<li id="rap9">${musicname}</li>`
+            teste2.push(rap9)}
+    }
+
+    function adrap10() {
+        if(teste2.indexOf(rap10) == -1){
+        var musicname= 'Easy Money'
+        posicao.innerHTML+= `<li id="rap10">${musicname}</li>`
+        teste2.push(rap10)
+        }
+    }
+
 function adicionarPlaylist(){
     adbr1()
     adbr2()
@@ -189,6 +293,19 @@ function adicionarPlaylist(){
     adbr8()
     adbr9()
     adbr10()
+}
+
+function adicionarPlaylistRap(){
+    adbr2()
+    adrap2()
+    adrap3()
+    adrap4()
+    adrap5()
+    adrap6()
+    adrap7()
+    adrap8()
+    adrap9()
+    adrap10()
 }
 
 
