@@ -2,28 +2,28 @@
 
 @font-face {
     font-family: 'shockwave';
-    src: url(./shockwave.ttf) format('truetype') ;
+    src: url(./fontes/shockwave.ttf) format('truetype') ;
     font-weight: normal;
     font-style: normal;
 }
 
 @font-face {
     font-family: 'street';
-    src: url(./street.ttf) format('truetype') ;
+    src: url(./fontes/street.ttf) format('truetype') ;
     font-weight: normal;
     font-style: normal;
 }
 
 @font-face {
     font-family: 'music';
-    src: url(./music.ttf) format('truetype') ;
+    src: url(./fontes/music.ttf) format('truetype') ;
     font-weight: normal;
     font-style: normal;
 }
 
 @font-face {
     font-family: 'absolute';
-    src: url(./Absolute.ttf) format('truetype') ;
+    src: url(./fontes/Absolute.ttf) format('truetype') ;
     font-weight: normal;
     font-style: normal;
 }
