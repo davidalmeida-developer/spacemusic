@@ -307,11 +307,3 @@ function adicionarPlaylistRap(){
     adrap9()
     adrap10()
 }
-
-
-function del(music, id){
-    
-    teste2.splice(teste2.indexOf(music), 1)
-    var node= document.getElementById(id)
-    node.parentNode.removeChild(node)
-}
