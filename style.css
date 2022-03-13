@@ -72,7 +72,7 @@ nav{
 
 nav > a{
     display: flex;
-    margin: auto 5px 10px 20px;
+    margin: auto 5px 5px 20px;
     color: black;
     font-weight: bolder;
     text-decoration: unset; 

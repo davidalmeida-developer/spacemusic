@@ -24,13 +24,18 @@ function volume() {
     audio.volume= vol.value
 }
 
-function next() {
+function mudaCor() {
     cor.style= "background-color: white; color: black; font-weight: small;"
+    
+}
+
+function next() {
+    mudaCor();
     i++
     playl()
 }
 function last() {
-    cor.style= "background-color: white; color: black; font-weight: small;"
+    mudaCor();
     i--
     playl()
 }
@@ -119,36 +124,25 @@ function adbr3() {
     if(teste2.indexOf(br3) == -1){
         var musicname= 'Meu Pedaço de Pecado'
         teste2.push(br3)
-        posicao.innerHTML+= `<li id="br3">${musicname}<button id="delbr3">-</button></li> `
-        document.getElementById("delbr3").addEventListener("click", del(br3,"br3"))
+        posicao.innerHTML+= `<li id="br3">${musicname}</li>`
     }
 }
 
-function del(music, id){
-    
-    teste2.splice(teste2.indexOf(music), 1)
-    var node= document.getElementById(id)
-    node.parentNode.removeChild(node)
-}
-        
-    
-    
-    function adbr4() {
-        if(teste2.indexOf(br4) == -1){
-            var musicname= 'Arranhão'
-            teste2.push(br4)
-            posicao.innerHTML+= `<li id="br4">${musicname}<button id="delbr4">-</button></li>`
-            document.getElementById("delbr4").addEventListener("click", del(br4, "br4"))
-        }
+function adbr4() {
+    if(teste2.indexOf(br4) == -1){
+        var musicname= 'Arranhão'
+        teste2.push(br4)
+        posicao.innerHTML+= `<li id="br4">${musicname}</li>`
     }
+}
 
 
 function adbr5() {
     if(teste2.indexOf(br5) == -1){
         var musicname= 'Rolê'
         posicao.innerHTML+= `<li id="br5">${musicname}</li>`
-        teste2.push(br5)}
-        
+        teste2.push(br5)
+        }
     }
     function adbr6() {
     if(teste2.indexOf(br6) == -1){
@@ -157,9 +151,9 @@ function adbr5() {
         teste2.push(br6)}
     }
     function adbr7() {
-    if(teste2.indexOf(br7) == -1){
-        var musicname= 'Bala Love'
-        posicao.innerHTML+= `<li id="br7">${musicname}</li>`
+        if(teste2.indexOf(br7) == -1){
+            var musicname= 'Bala Love'
+            posicao.innerHTML+= `<li id="br7">${musicname}</li>`
         teste2.push(br7)}
     }
     function adbr8() {
@@ -168,19 +162,39 @@ function adbr5() {
             posicao.innerHTML+= `<li id="br8">${musicname}</li>`
             teste2.push(br8)}
         }
-        function adbr9() {
-    if(teste2.indexOf(br9) == -1){
-        var musicname= 'Ela e Ela'
-        posicao.innerHTML+= `<li id="br9">${musicname}</li>`
-        teste2.push(br9)}
+    function adbr9() {
+        if(teste2.indexOf(br9) == -1){
+            var musicname= 'Ela e Ela'
+    posicao.innerHTML+= `<li id="br9">${musicname}</li>`
+    teste2.push(br9)}
     }
+
     function adbr10() {
-    if(teste2.indexOf(br10) == -1){
-    var musicname= 'Ficha Limpa'
-    posicao.innerHTML+= `<li id="br10">${musicname}</li>`
-    teste2.push(br10)}
+        if(teste2.indexOf(br10) == -1){
+        var musicname= 'Ficha Limpa'
+        posicao.innerHTML+= `<li id="br10">${musicname}</li>`
+        teste2.push(br10)
+        }
+    }
+
+
+function adicionarPlaylist(){
+    adbr1()
+    adbr2()
+    adbr3()
+    adbr4()
+    adbr5()
+    adbr6()
+    adbr7()
+    adbr8()
+    adbr9()
+    adbr10()
 }
 
 
-
-
+function del(music, id){
+    
+    teste2.splice(teste2.indexOf(music), 1)
+    var node= document.getElementById(id)
+    node.parentNode.removeChild(node)
+}
